@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: Red Glow
   m_Shader: {fileID: -6465566751694194690, guid: 0c8a0f4053af86e45b44440339c9236e,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
