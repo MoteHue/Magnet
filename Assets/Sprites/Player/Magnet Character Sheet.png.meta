@@ -50,6 +50,15 @@ TextureImporter:
   - first:
       213: 6424292767050592449
     second: Magnet Character Sheet_15
+  - first:
+      213: -7547404707971014599
+    second: Magnet Character Sheet_16
+  - first:
+      213: 6153254609607880601
+    second: Magnet Character Sheet_17
+  - first:
+      213: 3052789929330028934
+    second: Magnet Character Sheet_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -155,7 +164,7 @@ TextureImporter:
         width: 510
         height: 543
       alignment: 9
-      pivot: {x: 0.42285442, y: 0.024499433}
+      pivot: {x: 0.41803282, y: 0.04034952}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,7 +185,7 @@ TextureImporter:
         width: 511
         height: 543
       alignment: 9
-      pivot: {x: 0.42300528, y: 0.03355675}
+      pivot: {x: 0.42300528, y: 0.04261378}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,7 +206,7 @@ TextureImporter:
         width: 113
         height: 60
       alignment: 9
-      pivot: {x: 0.15182036, y: 0.23360595}
+      pivot: {x: 0.108297974, y: 0.17213084}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,7 +269,7 @@ TextureImporter:
         width: 239
         height: 305
       alignment: 9
-      pivot: {x: 0.489711, y: 0.11703836}
+      pivot: {x: 0.4845666, y: 0.11703836}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,7 +290,7 @@ TextureImporter:
         width: 116
         height: 47
       alignment: 9
-      pivot: {x: 0.9027697, y: 0.68311715}
+      pivot: {x: 0.8921706, y: 0.68311715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,7 +353,7 @@ TextureImporter:
         width: 53
         height: 152
       alignment: 9
-      pivot: {x: 0.7319831, y: 0.9125324}
+      pivot: {x: 0.7551811, y: 0.92871016}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -478,6 +487,48 @@ TextureImporter:
       bones: []
       spriteID: 1c07929fb3ca72950800000000000000
       internalID: 6424292767050592449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 22
+        width: 57
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930e64de76b324790800000000000000
+      internalID: -7547404707971014599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 29
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f66325770c46550800000000000000
+      internalID: 6153254609607880601
       vertices: []
       indices: 
       edges: []

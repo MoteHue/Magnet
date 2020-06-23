@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     CapsuleCollider2D hitbox;
     bool isMagnetising;
+    bool isDead;
 
     // Start is called before the first frame update
     void Start()
@@ -22,25 +23,31 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float movementInput = Input.GetAxis("Horizontal");
-        if (movementInput == 0) {
-            animator.SetBool("isRunning", false);
-        } else {
-            animator.SetBool("isRunning", true);
-        }
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            stopMagnet();
-            animator.SetTrigger("takeOff");
-            rb.AddRelativeForce(new Vector2(0f, 300f));
-        }
-        if (Input.GetKeyDown(KeyCode.Return)) {
-            if (isMagnetising) {
-                stopMagnet();
+        if (!isDead) {
+            float movementInput = Input.GetAxis("Horizontal");
+            if (movementInput == 0) {
+                animator.SetBool("isRunning", false);
             } else {
-                startMagnet();
+                animator.SetBool("isRunning", true);
+            }
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                stopMagnet();
+                animator.SetTrigger("takeOff");
+                rb.AddRelativeForce(new Vector2(0f, 300f));
+            }
+            if (Input.GetKeyDown(KeyCode.Return)) {
+                if (isMagnetising) {
+                    stopMagnet();
+                } else {
+                    startMagnet();
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Backspace)) {
+                animator.SetBool("isDead", true);
+                animator.SetTrigger("death");
+                isDead = true;
             }
         }
-
 
     }
 

@@ -12,9 +12,20 @@ public class ButtonBehaviour : MonoBehaviour
         animator = GetComponentInParent<Animator>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        animator.SetTrigger("Pressed");
+    private void OnTriggerStay2D(Collider2D collision) {
+        animator.SetBool("isPressed", true);
         isPressed = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        isPressed = false;
+        Invoke("Unpress", 0);
+    }
+
+    void Unpress() {
+        if (!isPressed) {
+            animator.SetBool("isPressed", false);
+        }
     }
 
 
