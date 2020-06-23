@@ -19,14 +19,7 @@ public class ButtonBehaviour : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision) {
         isPressed = false;
-        Invoke("Unpress", 0);
+        animator.SetBool("isPressed", false);
     }
-
-    void Unpress() {
-        if (!isPressed) {
-            animator.SetBool("isPressed", false);
-        }
-    }
-
 
 }
