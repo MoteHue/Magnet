@@ -59,6 +59,72 @@ TextureImporter:
   - first:
       213: 3052789929330028934
     second: Magnet Character Sheet_18
+  - first:
+      213: -2420050298601284690
+    second: Magnet Character Sheet_0
+  - first:
+      213: 369905485852178182
+    second: Magnet Character Sheet_1
+  - first:
+      213: -8704367653398912623
+    second: Magnet Character Sheet_2
+  - first:
+      213: -2731060612946977081
+    second: Magnet Character Sheet_3
+  - first:
+      213: 9200063866410662072
+    second: Magnet Character Sheet_4
+  - first:
+      213: 621431356235531698
+    second: Magnet Character Sheet_5
+  - first:
+      213: -8323732925979348188
+    second: Magnet Character Sheet_6
+  - first:
+      213: 2175455457828237191
+    second: Magnet Character Sheet_7
+  - first:
+      213: -1830685686954609190
+    second: Magnet Character Sheet_8
+  - first:
+      213: 4114291493550138200
+    second: Magnet Character Sheet_9
+  - first:
+      213: 8903222659929642229
+    second: Magnet Character Sheet_10
+  - first:
+      213: 7713981525548344285
+    second: Magnet Character Sheet_11
+  - first:
+      213: 1082980643001167497
+    second: Magnet Character Sheet_12
+  - first:
+      213: 1130239771205617176
+    second: Magnet Character Sheet_13
+  - first:
+      213: 4050505633521752333
+    second: Magnet Character Sheet_14
+  - first:
+      213: -5181580734318449429
+    second: Magnet Character Sheet_15
+  - first:
+      213: -3105840149711169525
+    second: Magnet Character Sheet_16
+  - first:
+      213: -907146890276854426
+    second: Magnet Character Sheet_17
+  - first:
+      213: 8072889868229476438
+    second: Magnet Character Sheet_19
+  - first:
+      213: -5517056798895010759
+    second: Magnet Character Sheet_20
+  - first:
+      213: 7798070960014105769
+    second: Magnet Character Sheet_21
+  - first:
+      213: -7439773178541097293
+    second: Magnet Character Sheet_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -160,18 +226,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 70
-        y: 498
+        y: 568
         width: 510
         height: 543
       alignment: 9
-      pivot: {x: 0.41803282, y: 0.04034952}
+      pivot: {x: 0.41785428, y: 0.032257024}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53c47e7bd9577c160800000000000000
-      internalID: 7045729462300134453
+      spriteID: eabda4d43114a6ed0800000000000000
+      internalID: -2420050298601284690
       vertices: []
       indices: 
       edges: []
@@ -181,18 +247,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 684
-        y: 495
+        y: 566
         width: 511
         height: 543
       alignment: 9
-      pivot: {x: 0.42300528, y: 0.04261378}
+      pivot: {x: 0.42057702, y: 0.032257024}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ee80622fb26abd10800000000000000
-      internalID: 2142133145823121124
+      spriteID: 607ffac541b222500800000000000000
+      internalID: 369905485852178182
       vertices: []
       indices: 
       edges: []
@@ -201,19 +267,19 @@ TextureImporter:
       name: Magnet Character Sheet_2
       rect:
         serializedVersion: 2
-        x: 660
-        y: 332
-        width: 113
-        height: 60
+        x: 1417
+        y: 578
+        width: 510
+        height: 543
       alignment: 9
-      pivot: {x: 0.108297974, y: 0.17213084}
+      pivot: {x: 0.41785434, y: 0.039490085}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af2ed9ee1b8c69a40800000000000000
-      internalID: 5374703871851356922
+      spriteID: 191e1c8acbfd33780800000000000000
+      internalID: -8704367653398912623
       vertices: []
       indices: 
       edges: []
@@ -222,8 +288,29 @@ TextureImporter:
       name: Magnet Character Sheet_3
       rect:
         serializedVersion: 2
+        x: 660
+        y: 402
+        width: 113
+        height: 60
+      alignment: 9
+      pivot: {x: 0.16401118, y: 0.19452056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce1c31a7d2591ad0800000000000000
+      internalID: -2731060612946977081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_4
+      rect:
+        serializedVersion: 2
         x: 891
-        y: 366
+        y: 436
         width: 32
         height: 33
       alignment: 0
@@ -233,18 +320,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6aace7d838fe85f0800000000000000
-      internalID: -752391164699825554
+      spriteID: 8b8705ca7513daf70800000000000000
+      internalID: 9200063866410662072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magnet Character Sheet_4
+      name: Magnet Character Sheet_5
       rect:
         serializedVersion: 2
         x: 990
-        y: 384
+        y: 454
         width: 32
         height: 30
       alignment: 0
@@ -254,29 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd0f5dafa415c64c0800000000000000
-      internalID: -4292966962313170721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Magnet Character Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 78
-        width: 239
-        height: 305
-      alignment: 9
-      pivot: {x: 0.4845666, y: 0.11703836}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de8fb89af4f5753c0800000000000000
-      internalID: -4370920117588199187
+      spriteID: 2b545b8a684cf9800800000000000000
+      internalID: 621431356235531698
       vertices: []
       indices: 
       edges: []
@@ -285,19 +351,19 @@ TextureImporter:
       name: Magnet Character Sheet_6
       rect:
         serializedVersion: 2
-        x: 386
-        y: 289
-        width: 116
-        height: 47
+        x: 1470
+        y: 21
+        width: 510
+        height: 543
       alignment: 9
-      pivot: {x: 0.8921706, y: 0.68311715}
+      pivot: {x: 0.39988488, y: 0.029845897}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eb3afd1171d6df00800000000000000
-      internalID: 1141329839349447656
+      spriteID: 42337cd31092c7c80800000000000000
+      internalID: -8323732925979348188
       vertices: []
       indices: 
       edges: []
@@ -306,8 +372,50 @@ TextureImporter:
       name: Magnet Character Sheet_7
       rect:
         serializedVersion: 2
+        x: 79
+        y: 148
+        width: 239
+        height: 305
+      alignment: 9
+      pivot: {x: 0.48356646, y: 0.09650939}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f698c7635c03e10800000000000000
+      internalID: 2175455457828237191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 359
+        width: 116
+        height: 47
+      alignment: 9
+      pivot: {x: 0.90630287, y: 0.69498783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5bdad21191896e0800000000000000
+      internalID: -1830685686954609190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_9
+      rect:
+        serializedVersion: 2
         x: 916
-        y: 275
+        y: 345
         width: 77
         height: 38
       alignment: 0
@@ -317,50 +425,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b79009afb65678940800000000000000
-      internalID: 5298315001064327547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Magnet Character Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 1121
-        y: 270
-        width: 172
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59d610aec057fc7b0800000000000000
-      internalID: -5201810346263614059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Magnet Character Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 43
-        width: 53
-        height: 152
-      alignment: 9
-      pivot: {x: 0.7551811, y: 0.92871016}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bea53952119b8cbf0800000000000000
-      internalID: -303789491551511829
+      spriteID: 853a77f9056e81930800000000000000
+      internalID: 4114291493550138200
       vertices: []
       indices: 
       edges: []
@@ -369,19 +435,19 @@ TextureImporter:
       name: Magnet Character Sheet_10
       rect:
         serializedVersion: 2
-        x: 619
-        y: 73
-        width: 66
-        height: 145
+        x: 496
+        y: 113
+        width: 53
+        height: 152
       alignment: 9
-      pivot: {x: 0.2578236, y: 0.9154886}
+      pivot: {x: 0.7223177, y: 0.93065745}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9585f4e9e362a5d0800000000000000
-      internalID: -3052767741183949413
+      spriteID: 5f4905186d99e8b70800000000000000
+      internalID: 8903222659929642229
       vertices: []
       indices: 
       edges: []
@@ -390,8 +456,29 @@ TextureImporter:
       name: Magnet Character Sheet_11
       rect:
         serializedVersion: 2
+        x: 619
+        y: 143
+        width: 66
+        height: 145
+      alignment: 9
+      pivot: {x: 0.2818021, y: 0.8611589}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd32c3ab3519d0b60800000000000000
+      internalID: 7713981525548344285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_12
+      rect:
+        serializedVersion: 2
         x: 879
-        y: 147
+        y: 217
         width: 50
         height: 44
       alignment: 0
@@ -401,18 +488,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aded8597b8703d940800000000000000
-      internalID: 5319603880472403674
+      spriteID: 98e65bc2825870f00800000000000000
+      internalID: 1082980643001167497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magnet Character Sheet_12
+      name: Magnet Character Sheet_13
       rect:
         serializedVersion: 2
         x: 964
-        y: 163
+        y: 233
         width: 56
         height: 49
       alignment: 0
@@ -422,29 +509,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740a4f38768566d10800000000000000
-      internalID: 2118477876343119943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Magnet Character Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 1161
-        y: 174
-        width: 106
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d64aabaf39f4b0390800000000000000
-      internalID: -7851094028405005203
+      spriteID: 816cab9651b6faf00800000000000000
+      internalID: 1130239771205617176
       vertices: []
       indices: 
       edges: []
@@ -453,8 +519,50 @@ TextureImporter:
       name: Magnet Character Sheet_14
       rect:
         serializedVersion: 2
+        x: 1050
+        y: 204
+        width: 173
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0958c6c969463830800000000000000
+      internalID: 4050505633521752333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 233
+        width: 173
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bece0fb76c35718b0800000000000000
+      internalID: -5181580734318449429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_16
+      rect:
+        serializedVersion: 2
         x: 926
-        y: 90
+        y: 160
         width: 46
         height: 22
       alignment: 0
@@ -464,20 +572,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c8161b7f52203ba0800000000000000
-      internalID: -6111346900859479864
+      spriteID: b08d15bd6d6d5e4d0800000000000000
+      internalID: -3105840149711169525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magnet Character Sheet_15
+      name: Magnet Character Sheet_17
       rect:
         serializedVersion: 2
-        x: 1184
-        y: 88
-        width: 58
-        height: 33
+        x: 1091
+        y: 108
+        width: 106
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -485,18 +593,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c07929fb3ca72950800000000000000
-      internalID: 6424292767050592449
+      spriteID: 665a2f5a5ba2963f0800000000000000
+      internalID: -907146890276854426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magnet Character Sheet_16
+      name: Magnet Character Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 137
+        width: 106
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6813b9f2440bd5a20800000000000000
+      internalID: 3052789929330028934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_19
       rect:
         serializedVersion: 2
         x: 879
-        y: 22
+        y: 92
         width: 57
         height: 45
       alignment: 0
@@ -506,18 +635,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 930e64de76b324790800000000000000
-      internalID: -7547404707971014599
+      spriteID: 6500baa209aa80070800000000000000
+      internalID: 8072889868229476438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Magnet Character Sheet_17
+      name: Magnet Character Sheet_20
       rect:
         serializedVersion: 2
         x: 974
-        y: 29
+        y: 99
         width: 52
         height: 47
       alignment: 0
@@ -527,8 +656,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99f66325770c46550800000000000000
-      internalID: 6153254609607880601
+      spriteID: 93c8530721a7f63b0800000000000000
+      internalID: -5517056798895010759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 22
+        width: 58
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac1ee0e830583c60800000000000000
+      internalID: 7798070960014105769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magnet Character Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 51
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be349336bd90c890800000000000000
+      internalID: -7439773178541097293
       vertices: []
       indices: 
       edges: []
@@ -543,7 +714,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures:
-    - texture: {fileID: 2800000, guid: cd432c72b8a14034aaa60ccfc9a4e05e, type: 3}
+    - texture: {fileID: 2800000, guid: c1d75cedcd7548841a65800c86c205d8, type: 3}
       name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0

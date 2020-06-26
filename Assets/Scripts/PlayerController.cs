@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEditor.ShortcutManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
 
+    public SpriteRenderer head;
+    public Sprite[] spriteArray;
+    public AnimatorController[] controllerArray;
+
     Animator animator;
     Rigidbody2D rb;
     CapsuleCollider2D hitbox;
     bool isMagnetising;
     bool isDead;
+    bool isBlue;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +53,24 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("death");
                 isDead = true;
             }
+            if (Input.GetKeyDown(KeyCode.Alpha1)) {
+                isBlue = true;
+                if (isMagnetising) {
+                    head.sprite = spriteArray[0];
+                } else {
+                    head.sprite = spriteArray[1];
+                }
+                animator.runtimeAnimatorController = controllerArray[0];
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2)) {
+                isBlue = false;
+                if (isMagnetising) {
+                    head.sprite = spriteArray[2];
+                } else {
+                    head.sprite = spriteArray[3];
+                }
+                animator.runtimeAnimatorController = controllerArray[1];
+            }
         }
 
     }
@@ -63,7 +87,6 @@ public class PlayerController : MonoBehaviour
         animator.ResetTrigger("stopMagnetising");
         isMagnetising = true;
         rb.freezeRotation = false;
-        hitbox.size = new Vector2(hitbox.size.x, 7f);
     }
 
     void stopMagnet() {
@@ -72,6 +95,5 @@ public class PlayerController : MonoBehaviour
         isMagnetising = false;
         rb.freezeRotation = true;
         rb.rotation = 0f;
-        hitbox.size = new Vector2(hitbox.size.x, 8f);
     }
 }

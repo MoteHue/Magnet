@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Death
+  m_Name: Death Blue
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -247,6 +247,14 @@ AnimationClip:
     path: Body/Head/Mouth
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 5374703871851356922, guid: d372c14c32353fb40bc36f04e6f58ed8,
+        type: 3}
+    attribute: m_Sprite
+    path: Body/Head
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -324,6 +332,13 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 694585260
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 8072889868229476438, guid: d372c14c32353fb40bc36f04e6f58ed8, type: 3}
     - {fileID: 8072889868229476438, guid: d372c14c32353fb40bc36f04e6f58ed8, type: 3}
@@ -331,6 +346,7 @@ AnimationClip:
     - {fileID: -5517056798895010759, guid: d372c14c32353fb40bc36f04e6f58ed8, type: 3}
     - {fileID: -7547404707971014599, guid: d372c14c32353fb40bc36f04e6f58ed8, type: 3}
     - {fileID: -7547404707971014599, guid: d372c14c32353fb40bc36f04e6f58ed8, type: 3}
+    - {fileID: 5374703871851356922, guid: d372c14c32353fb40bc36f04e6f58ed8, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

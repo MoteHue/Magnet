@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue Glow
+  m_Name: Button Glow
   m_Shader: {fileID: -6465566751694194690, guid: 0c8a0f4053af86e45b44440339c9236e,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -30,4 +30,4 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_9B542599: {r: 0, g: 2.3443835, b: 9.734288, a: 0}
+    - Color_9B542599: {r: 1.9766746, g: 0.014804005, b: 0, a: 0}
