@@ -7,6 +7,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    public Camera mainCamera;
+    public float cameraSmoothSpeed = 0.5f;
+
     public SpriteRenderer head;
     public Sprite[] spriteArray;
     public AnimatorController[] controllerArray;
@@ -31,8 +34,6 @@ public class PlayerController : MonoBehaviour
     bool isDead;
     bool isBlue = true;
 
-    public Vector3 Scale;
-
     bool isTouchingFront;
     bool isGrounded;
     bool facingRight = true;
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        animator.runtimeAnimatorController = controllerArray[0];
     }
 
     // Update is called once per frame
@@ -90,7 +92,7 @@ public class PlayerController : MonoBehaviour
             }
 
             // Check for magnetism
-            if (Input.GetKeyDown(KeyCode.Return)) {
+            if (Input.GetKeyDown(KeyCode.Space)) {
                 if (isMagnetising) {
                     StopMagnet();
                 } else {
@@ -106,18 +108,14 @@ public class PlayerController : MonoBehaviour
             }
 
             // Check for colour switch
-            if (Input.GetKeyDown(KeyCode.Alpha1)) {
-                isBlue = true;
-                animator.runtimeAnimatorController = controllerArray[0];
-                if (isMagnetising) {
-                    animator.ResetTrigger("startMagnetising");
-                    animator.SetTrigger("startMagnetising");
-                    animator.SetBool("isMagnetising", true);
+            if (Input.GetKeyDown(KeyCode.Return)) {
+                if (!isBlue) {
+                    isBlue = true;
+                    animator.runtimeAnimatorController = controllerArray[0];
+                } else {
+                    isBlue = false;
+                    animator.runtimeAnimatorController = controllerArray[1];
                 }
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2)) {
-                isBlue = false;
-                animator.runtimeAnimatorController = controllerArray[1];
                 if (isMagnetising) {
                     animator.ResetTrigger("startMagnetising");
                     animator.SetTrigger("startMagnetising");
@@ -142,11 +140,17 @@ public class PlayerController : MonoBehaviour
             }
 
             // Check for jumping
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+            if (Input.GetAxis("Vertical") > 0 && isGrounded) {
                 StopMagnet();
                 animator.SetTrigger("takeOff");
                 rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
             }
+        }
+    }
+
+    private void LateUpdate() {
+        if (!isDead) {
+            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, new Vector3(transform.position.x, transform.position.y, -10f), 0.5f);
         }
     }
 
@@ -170,8 +174,16 @@ public class PlayerController : MonoBehaviour
     void Flip() {
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
-        Scale = Scaler;
         Scaler.x = -Scaler.x;
         transform.localScale = Scaler;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (!isDead && collision.gameObject.CompareTag("Death")) {
+            rb.freezeRotation = false;
+            animator.SetBool("isDead", true);
+            animator.SetTrigger("death");
+            isDead = true;
+        }
     }
 }
