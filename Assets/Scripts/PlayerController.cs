@@ -10,90 +10,168 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer head;
     public Sprite[] spriteArray;
     public AnimatorController[] controllerArray;
+    public Transform groundCheck;
+    public LayerMask groundMask;
+    public float groundCheckRadius = 0.9f;
+    public Transform frontCheck;
+    public float frontCheckRadius = 1f;
+
+    public float moveSpeed = 10f;
+    public float jumpHeight = 10f;
+
+    public LayerMask redMagnetMask;
+    public LayerMask blueMagnetMask;
+    public float magnetismRadius = 10f;
+
+    public float magnetismStrength = 0.1f;
 
     Animator animator;
     Rigidbody2D rb;
-    CapsuleCollider2D hitbox;
     bool isMagnetising;
     bool isDead;
-    bool isBlue;
+    bool isBlue = true;
+
+    public Vector3 Scale;
+
+    bool isTouchingFront;
+    bool isGrounded;
+    bool facingRight = true;
+
+    Collider2D[] attractions;
+    Collider2D[] repels;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        hitbox = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
+        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, frontCheckRadius, groundMask);
+
+        // Get nearby magnets
+        if (isBlue) {
+            attractions = Physics2D.OverlapCircleAll(transform.position, magnetismRadius, redMagnetMask);
+            repels = Physics2D.OverlapCircleAll(transform.position, magnetismRadius, blueMagnetMask);
+        } else {
+            attractions = Physics2D.OverlapCircleAll(transform.position, magnetismRadius, blueMagnetMask);
+            repels = Physics2D.OverlapCircleAll(transform.position, magnetismRadius, redMagnetMask);
+        }
+
+        if (isMagnetising) {
+            foreach (Collider2D attraction in attractions) {
+                Vector2 direction = attraction.transform.position - transform.position;
+                rb.velocity += direction * magnetismStrength;
+            }
+            foreach (Collider2D repel in repels) {
+                Vector2 direction = repel.transform.position - transform.position;
+                rb.velocity -= direction * magnetismStrength;
+            }
+        }
+
+        if (!isGrounded) {
+            animator.SetBool("isJumping", true);
+        } else {
+            animator.SetBool("isJumping", false);
+        }
+
         if (!isDead) {
             float movementInput = Input.GetAxis("Horizontal");
-            if (movementInput == 0) {
-                animator.SetBool("isRunning", false);
-            } else {
-                animator.SetBool("isRunning", true);
+
+            // Check to flip
+            if (!facingRight && movementInput > 0 && !isMagnetising) {
+                Flip();
+            } else if (facingRight && movementInput < 0 && !isMagnetising) {
+                Flip();
             }
-            if (Input.GetKeyDown(KeyCode.Space)) {
-                stopMagnet();
-                animator.SetTrigger("takeOff");
-                rb.AddRelativeForce(new Vector2(0f, 300f));
-            }
+
+            // Check for magnetism
             if (Input.GetKeyDown(KeyCode.Return)) {
                 if (isMagnetising) {
-                    stopMagnet();
+                    StopMagnet();
                 } else {
-                    startMagnet();
+                    StartMagnet();
                 }
             }
+
+            // Check for death
             if (Input.GetKeyDown(KeyCode.Backspace)) {
                 animator.SetBool("isDead", true);
                 animator.SetTrigger("death");
                 isDead = true;
             }
+
+            // Check for colour switch
             if (Input.GetKeyDown(KeyCode.Alpha1)) {
                 isBlue = true;
-                if (isMagnetising) {
-                    head.sprite = spriteArray[0];
-                } else {
-                    head.sprite = spriteArray[1];
-                }
                 animator.runtimeAnimatorController = controllerArray[0];
+                if (isMagnetising) {
+                    animator.ResetTrigger("startMagnetising");
+                    animator.SetTrigger("startMagnetising");
+                    animator.SetBool("isMagnetising", true);
+                }
             }
             if (Input.GetKeyDown(KeyCode.Alpha2)) {
                 isBlue = false;
-                if (isMagnetising) {
-                    head.sprite = spriteArray[2];
-                } else {
-                    head.sprite = spriteArray[3];
-                }
                 animator.runtimeAnimatorController = controllerArray[1];
+                if (isMagnetising) {
+                    animator.ResetTrigger("startMagnetising");
+                    animator.SetTrigger("startMagnetising");
+                    animator.SetBool("isMagnetising", true);
+                }
             }
         }
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        animator.SetBool("isJumping", false);
-    }
-    private void OnCollisionExit2D(Collision2D collision) {
-        animator.SetBool("isJumping", true);
+    private void FixedUpdate() {
+        if (!isDead) {
+            float movementInput = Input.GetAxis("Horizontal");
+            // Check for running
+            if (movementInput == 0) {
+                animator.SetBool("isRunning", false);
+            } else if (!isMagnetising) {
+                animator.SetBool("isRunning", true);
+                if ((!isTouchingFront && !isGrounded) || (isGrounded)) {
+                    rb.velocity = new Vector2(moveSpeed * movementInput, rb.velocity.y);
+                }
+            }
+
+            // Check for jumping
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+                StopMagnet();
+                animator.SetTrigger("takeOff");
+                rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+            }
+        }
     }
 
-    void startMagnet() {
+    void StartMagnet() {
         animator.SetTrigger("startMagnetising");
         animator.ResetTrigger("stopMagnetising");
+        animator.SetBool("isMagnetising", true);
         isMagnetising = true;
         rb.freezeRotation = false;
     }
 
-    void stopMagnet() {
+    void StopMagnet() {
         animator.SetTrigger("stopMagnetising");
         animator.ResetTrigger("startMagnetising");
+        animator.SetBool("isMagnetising", false);
         isMagnetising = false;
         rb.freezeRotation = true;
         rb.rotation = 0f;
+    }
+
+    void Flip() {
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
+        Scale = Scaler;
+        Scaler.x = -Scaler.x;
+        transform.localScale = Scaler;
     }
 }
