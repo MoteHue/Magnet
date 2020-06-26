@@ -1370,7 +1370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   cameraSmoothSpeed: 0.5
-  head: {fileID: 2999579796539596235}
+  head: {fileID: 0}
   spriteArray:
   - {fileID: 1141329839349447656, guid: d372c14c32353fb40bc36f04e6f58ed8, type: 3}
   - {fileID: 5374703871851356922, guid: d372c14c32353fb40bc36f04e6f58ed8, type: 3}
@@ -1379,23 +1379,23 @@ MonoBehaviour:
   controllerArray:
   - {fileID: 9100000, guid: 8e37ecd37a4b7c64e8eba361343d3d3c, type: 2}
   - {fileID: 9100000, guid: 0148b42d1b2d8784eb6f16d94cc3deef, type: 2}
-  groundCheck: {fileID: 2999579795885902513}
+  groundCheck: {fileID: 0}
   groundMask:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 7424
   groundCheckRadius: 0.9
-  frontCheck: {fileID: 2999579796668134719}
+  frontCheck: {fileID: 0}
   frontCheckRadius: 1
-  moveSpeed: 10
-  jumpHeight: 10
+  moveSpeed: 15
+  jumpHeight: 30
   redMagnetMask:
     serializedVersion: 2
     m_Bits: 2048
   blueMagnetMask:
     serializedVersion: 2
     m_Bits: 4096
-  magnetismRadius: 10
-  magnetismStrength: 0.1
+  magnetismRadius: 15
+  magnetismStrength: 0.35
 --- !u!1 &2999579797267819981
 GameObject:
   m_ObjectHideFlags: 0

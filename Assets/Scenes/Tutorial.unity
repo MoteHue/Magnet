@@ -10343,7 +10343,7 @@ PrefabInstance:
     - target: {fileID: 2999579797155307758, guid: dec20d56bd4746d449b0f087e22317e8,
         type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2999579797155307758, guid: dec20d56bd4746d449b0f087e22317e8,
         type: 3}
@@ -10359,6 +10359,36 @@ PrefabInstance:
         type: 3}
       propertyPath: groundMask.m_Bits
       value: 7424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999579797155307759, guid: dec20d56bd4746d449b0f087e22317e8,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999579797155307759, guid: dec20d56bd4746d449b0f087e22317e8,
+        type: 3}
+      propertyPath: magnetismStrength
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999579797155307759, guid: dec20d56bd4746d449b0f087e22317e8,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999579797155307759, guid: dec20d56bd4746d449b0f087e22317e8,
+        type: 3}
+      propertyPath: magnetismRadius
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999579797267819978, guid: dec20d56bd4746d449b0f087e22317e8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999579797267819978, guid: dec20d56bd4746d449b0f087e22317e8,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec20d56bd4746d449b0f087e22317e8, type: 3}
