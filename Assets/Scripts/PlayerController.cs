@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate() {
         if (!isDead) {
-            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, new Vector3(transform.position.x, transform.position.y, -10f), 0.5f);
+            //mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, new Vector3(transform.position.x, transform.position.y, -10f), 0.5f);
         }
     }
 
