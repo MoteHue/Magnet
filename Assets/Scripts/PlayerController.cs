@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
     public float magnetismStrength = 0.1f;
 
+    public Canvas pauseCanvas;
+
     Animator animator;
     Rigidbody2D rb;
     bool isMagnetising;
@@ -39,6 +41,8 @@ public class PlayerController : MonoBehaviour
     bool isTouchingFront;
     bool isGrounded;
     bool facingRight = true;
+
+    bool isGamePaused;
 
     Collider2D[] attractions;
     Collider2D[] repels;
@@ -55,6 +59,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            pauseCanvas.gameObject.SetActive(true);
+            pauseCanvas.GetComponentInChildren<PauseMenu>().PauseGame();
+        }
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
         isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, frontCheckRadius, groundMask);
 

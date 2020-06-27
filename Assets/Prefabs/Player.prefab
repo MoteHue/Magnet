@@ -1397,7 +1397,7 @@ MonoBehaviour:
   blueMagnetMask:
     serializedVersion: 2
     m_Bits: 4096
-  magnetismRadius: 15
+  magnetismRadius: 14.5
   magnetismStrength: 0.35
 --- !u!1 &2999579797267819981
 GameObject:

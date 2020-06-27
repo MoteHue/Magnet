@@ -222,7 +222,7 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 512
-  magnetismRadius: 15
+  magnetismRadius: 14.5
   isBlue: 1
 --- !u!1 &4663572777142919581
 GameObject:
