@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
-    Animator animator;
 
-    private void Start() {
-        animator = GetComponent<Animator>();
+    bool isOpen = false;
+
+    private void Update() {
+        if (isOpen) {
+            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(transform.localPosition.x, 0.8f, transform.localPosition.z), 0.5f);
+        } else {
+            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(transform.localPosition.x, -3f, transform.localPosition.z), 0.5f);
+        }
     }
 
     public void open() {
-        animator.SetBool("isOpen", true);
+        isOpen = true;
     }
 
     public void close() {
-        animator.SetBool("isOpen", false);
+        isOpen = false;
     }
 
 }

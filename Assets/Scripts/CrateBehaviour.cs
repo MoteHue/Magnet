@@ -52,6 +52,7 @@ public class CrateBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
             rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
         }
     }
 
