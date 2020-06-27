@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isDead", true);
             animator.SetTrigger("death");
             isDead = true;
-            Invoke("reloadScene", 3f);
+            Invoke("reloadScene", 2f);
         }
 
         if (collision.gameObject.CompareTag("Crate")) {
