@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEditor.ShortcutManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -187,11 +188,16 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isDead", true);
             animator.SetTrigger("death");
             isDead = true;
+            Invoke("reloadScene", 3f);
         }
 
         if (collision.gameObject.CompareTag("Crate")) {
             rb.velocity = Vector2.zero;
         }
 
+    }
+
+    void reloadScene() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
