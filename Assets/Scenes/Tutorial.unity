@@ -1554,7 +1554,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 13.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1578,7 +1578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -1.9, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1800,8 +1800,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540383836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.97, y: 22.7, z: 0}
-  m_LocalScale: {x: 125.049, y: 1, z: 1}
+  m_LocalPosition: {x: 65.929, y: 22.7, z: 0}
+  m_LocalScale: {x: 125.120155, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 917444452}
   m_RootOrder: 3
@@ -2412,7 +2412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
-  newCameraPosition: {x: 46, y: 0, z: -10}
+  newCameraPosition: {x: 45.4, y: 0, z: -10}
+  newCameraSize: 14
   alternateTrigger: {fileID: 1378211284}
   lightsToTurnOff:
   - {fileID: 639393679}
@@ -2613,6 +2614,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2237294674471152799, guid: 2e2fd17d0091f3e4ead4f4dcf5845891,
     type: 3}
   m_PrefabInstance: {fileID: 1802645782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &755303888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2999579796668134719, guid: dec20d56bd4746d449b0f087e22317e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2999579797618387446}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &762794633
 PrefabInstance:
@@ -4477,6 +4484,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89de16c69c9f27942949289dd6ec8863, type: 3}
+--- !u!4 &984764063 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2999579795885902513, guid: dec20d56bd4746d449b0f087e22317e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2999579797618387446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &993924333
 GameObject:
   m_ObjectHideFlags: 0
@@ -6480,7 +6493,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
-  newCameraPosition: {x: 0, y: 0, z: -10}
+  newCameraPosition: {x: -1.9, y: 0, z: -10}
+  newCameraSize: 13.5
   alternateTrigger: {fileID: 734303535}
   lightsToTurnOff:
   - {fileID: 1336977718}
@@ -8936,6 +8950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
   newCameraPosition: {x: 94, y: 0, z: -10}
+  newCameraSize: 14
   alternateTrigger: {fileID: 2029138353}
   lightsToTurnOff:
   - {fileID: 1336977718}
@@ -9383,7 +9398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 519420031}
-  newCameraPosition: {x: 46, y: 0, z: -10}
+  newCameraPosition: {x: 45.4, y: 0, z: -10}
+  newCameraSize: 14
   alternateTrigger: {fileID: 1949521598}
   lightsToTurnOff:
   - {fileID: 88914476}
@@ -10380,6 +10396,16 @@ PrefabInstance:
       propertyPath: magnetismRadius
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 2999579797155307759, guid: dec20d56bd4746d449b0f087e22317e8,
+        type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 984764063}
+    - target: {fileID: 2999579797155307759, guid: dec20d56bd4746d449b0f087e22317e8,
+        type: 3}
+      propertyPath: frontCheck
+      value: 
+      objectReference: {fileID: 755303888}
     - target: {fileID: 2999579797267819978, guid: dec20d56bd4746d449b0f087e22317e8,
         type: 3}
       propertyPath: m_LocalScale.y

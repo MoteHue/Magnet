@@ -1379,12 +1379,12 @@ MonoBehaviour:
   controllerArray:
   - {fileID: 9100000, guid: 8e37ecd37a4b7c64e8eba361343d3d3c, type: 2}
   - {fileID: 9100000, guid: 0148b42d1b2d8784eb6f16d94cc3deef, type: 2}
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 2999579795885902513}
   groundMask:
     serializedVersion: 2
     m_Bits: 7424
   groundCheckRadius: 0.9
-  frontCheck: {fileID: 0}
+  frontCheck: {fileID: 2999579796668134719}
   frontCheckRadius: 1
   moveSpeed: 15
   jumpHeight: 30
