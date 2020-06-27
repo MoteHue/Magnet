@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
@@ -13,20 +14,24 @@ public class CameraTriggerBehaviour : MonoBehaviour
     public Light2D[] lightsToTurnOn;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        mainCamera.GetComponent<CameraBehaviour>().SetTargetPosition(newCameraPosition);
-        mainCamera.GetComponent<CameraBehaviour>().SetTargetSize(newCameraSize);
-        foreach (Light2D light in lightsToTurnOff) {
-            light.intensity = 0f;
-        }
-        foreach (Light2D light in lightsToTurnOn) {
-            light.intensity = 1f;
+        if (collision.CompareTag("Player")) {
+            mainCamera.GetComponent<CameraBehaviour>().SetTargetPosition(newCameraPosition);
+            mainCamera.GetComponent<CameraBehaviour>().SetTargetSize(newCameraSize);
+            foreach (Light2D light in lightsToTurnOff) {
+                light.intensity = 0f;
+            }
+            foreach (Light2D light in lightsToTurnOn) {
+                light.intensity = 1f;
+            }
         }
 
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
-        alternateTrigger.SetActive(true);
-        gameObject.SetActive(false);
+        if (collision.CompareTag("Player")) {
+            alternateTrigger.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 
 }

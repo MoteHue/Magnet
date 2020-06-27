@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6291622224646002092}
   - component: {fileID: 5820087216375867585}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Point Light 2D (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,9 +84,10 @@ GameObject:
   - component: {fileID: 1434577353355512919}
   - component: {fileID: 1434577353355512914}
   - component: {fileID: 1434577353355512913}
-  m_Layer: 10
+  - component: {fileID: 745315908301970073}
+  m_Layer: 13
   m_Name: Red Crate
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +172,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -206,6 +207,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.5, y: 7.5}
   m_EdgeRadius: 0
+--- !u!114 &745315908301970073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434577353355512918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd4394610883bf448deb3e4bff1b226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  magnetismRadius: 15
+  isBlue: 0
 --- !u!1 &3211664992782971846
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5054498052584686307}
   - component: {fileID: 6024469497321624160}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939809801713068842}
   - component: {fileID: 5352840119071375109}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Point Light 2D (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138400802766863236}
   - component: {fileID: 8180835862178191563}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Point Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

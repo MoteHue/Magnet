@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Death
+  - Ground
+  - Crate
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Foreground
   - Red Magnet
   - Blue Magnet
-  - 
+  - Crate
   - 
   - 
   - 

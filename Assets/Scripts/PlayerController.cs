@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 10f;
     public float jumpHeight = 10f;
 
+    public LayerMask crateMask;
     public LayerMask redMagnetMask;
     public LayerMask blueMagnetMask;
     public float magnetismRadius = 10f;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     Collider2D[] attractions;
     Collider2D[] repels;
+    Collider2D[] crates;
 
     // Start is called before the first frame update
     void Start()
@@ -73,7 +75,7 @@ public class PlayerController : MonoBehaviour
                 Vector2 direction = repel.transform.position - transform.position;
                 rb.velocity -= direction * magnetismStrength;
             }
-        }
+        } 
 
         if (!isGrounded) {
             animator.SetBool("isJumping", true);
@@ -145,12 +147,13 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("takeOff");
                 rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
             }
-        }
-    }
 
-    private void LateUpdate() {
-        if (!isDead) {
-            //mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, new Vector3(transform.position.x, transform.position.y, -10f), 0.5f);
+            // Inform nearby crates
+            crates = Physics2D.OverlapCircleAll(transform.position, magnetismRadius, crateMask);
+            foreach (Collider2D crate in crates) {
+                crate.GetComponent<CrateBehaviour>().informMagnetised(isBlue, transform.position, magnetismStrength, isMagnetising);
+            }
+
         }
     }
 
@@ -185,5 +188,10 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("death");
             isDead = true;
         }
+
+        if (collision.gameObject.CompareTag("Crate")) {
+            rb.velocity = Vector2.zero;
+        }
+
     }
 }

@@ -10,8 +10,10 @@ public class CameraBehaviour : MonoBehaviour
     float targetSize;
 
     private void Start() {
-        targetPosition = new Vector3(-1.9f, 0f, -10f);
-        targetSize = 13.5f;
+        transform.position = new Vector3(-1.9f, 0f, -10f);
+        targetPosition = transform.position;
+        GetComponent<Camera>().orthographicSize = 13.5f;
+        targetSize = GetComponent<Camera>().orthographicSize;
     }
 
     // Update is called once per frame

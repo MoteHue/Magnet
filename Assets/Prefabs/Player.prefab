@@ -1382,12 +1382,15 @@ MonoBehaviour:
   groundCheck: {fileID: 2999579795885902513}
   groundMask:
     serializedVersion: 2
-    m_Bits: 7424
+    m_Bits: 15616
   groundCheckRadius: 0.9
   frontCheck: {fileID: 2999579796668134719}
   frontCheckRadius: 1
   moveSpeed: 15
   jumpHeight: 30
+  crateMask:
+    serializedVersion: 2
+    m_Bits: 8192
   redMagnetMask:
     serializedVersion: 2
     m_Bits: 2048
