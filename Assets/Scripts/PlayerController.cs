@@ -63,6 +63,9 @@ public class PlayerController : MonoBehaviour
             pauseCanvas.gameObject.SetActive(true);
             pauseCanvas.GetComponentInChildren<PauseMenu>().PauseGame();
         }
+        if (Input.GetKeyDown(KeyCode.R)) {
+            reloadScene();
+        }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
         isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, frontCheckRadius, groundMask);

@@ -13,6 +13,10 @@ public class PauseMenu : MonoBehaviour
             pauseCanvas.gameObject.SetActive(false);
             ResumeGame();
         }
+        if (Input.GetKeyDown(KeyCode.R)) {
+            ResumeGame();
+            Restart();
+        }
     }
 
     public static bool GameIsPaused = false;
