@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
-
+    public AudioSource doorAudio;
     bool isOpen = false;
 
     private void Update() {
@@ -16,11 +16,19 @@ public class DoorBehaviour : MonoBehaviour
     }
 
     public void open() {
+        doorAudio.enabled = true;
         isOpen = true;
+        Invoke("disableAudio", 1f);
     }
 
     public void close() {
+        doorAudio.enabled = true;
         isOpen = false;
+        Invoke("disableAudio", 1f);
+    }
+
+    void disableAudio() {
+        doorAudio.enabled = false;
     }
 
 }

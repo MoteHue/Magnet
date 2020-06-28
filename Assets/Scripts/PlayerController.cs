@@ -1,19 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
-using UnityEditor.ShortcutManagement;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public AudioSource magnetismAudio;
+    public AudioSource footstepAudio;
 
     public Camera mainCamera;
     public float cameraSmoothSpeed = 0.5f;
 
     public SpriteRenderer head;
     public Sprite[] spriteArray;
-    public AnimatorController[] controllerArray;
+    public RuntimeAnimatorController[] controllerArray;
     public Transform groundCheck;
     public LayerMask groundMask;
     public float groundCheckRadius = 0.9f;
@@ -62,6 +61,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             pauseCanvas.gameObject.SetActive(true);
             pauseCanvas.GetComponentInChildren<PauseMenu>().PauseGame();
+            footstepAudio.enabled = false;
         }
         if (Input.GetKeyDown(KeyCode.R)) {
             reloadScene();
@@ -109,8 +109,10 @@ public class PlayerController : MonoBehaviour
             // Check for magnetism
             if (Input.GetKeyDown(KeyCode.Space)) {
                 if (isMagnetising) {
+                    magnetismAudio.enabled = false;
                     StopMagnet();
                 } else {
+                    magnetismAudio.enabled = true;
                     StartMagnet();
                 }
             }
@@ -168,6 +170,13 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+
+        if (isGrounded) {
+            footstepAudio.enabled = true;
+        } else {
+            footstepAudio.enabled = false;
+        }
+
     }
 
     void StartMagnet() {

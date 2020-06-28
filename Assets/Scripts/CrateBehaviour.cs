@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
-using UnityEditorInternal;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CrateBehaviour : MonoBehaviour
 {
+    public AudioSource collisionAudio;
+
     public LayerMask playerMask;
     public float magnetismRadius;
 
@@ -50,9 +48,18 @@ public class CrateBehaviour : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        
         if (collision.gameObject.CompareTag("Player")) {
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0f;
+        } else {
+            collisionAudio.enabled = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision) {
+        if (!collision.gameObject.CompareTag("Player")) {
+            collisionAudio.enabled = false;
         }
     }
 
